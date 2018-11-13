@@ -1,21 +1,34 @@
 <?php
- /* //13.11.2018 m.sak
- ** global $name 
- sterowanie wyświetlanymi sekcjami z pliku master_page
- podawana jest na wejście nazwa pliku, która skojarzona jest ze zestawem includów z master_page
- */
- global $name;
+session_start();
+
+require ("root/login/root.php");
+
+/*
+// przykładowy test connectingu i zwrócenia wartości przez funkcję connectingu
+// funkcja zwraca wartości w JSON.
+
+$error = __getConnect__();
+echo $error;
+
+*/
 ?>
+
 <!doctype html>
 <html lang="pl">
    
 	<body>
       <?php
 
-	  $name="index";
-	   
-	  include ("master_page.php");
-	  
+			include ("header.php");
+			include ("navbar.php");
+			include ("main_content.php");
+			include ("carousel.php");
+			include ("content.php");
+			include ("footer.php");
+			include ("script.php");
+
+			
+			
 	  ?>
    </body>
 </html>
